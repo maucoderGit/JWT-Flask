@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request
 
-from function_jwt import write_token
+from function_jwt import validate_token, write_token
 
 routes_auth = Blueprint('routes_auth', __name__)
 
@@ -14,3 +14,9 @@ def login():
         response.status_code = 404
 
         return response
+
+@routes_auth.route('/verify/token')
+def verify():
+    token = (request.headers['Authorization'].split(' '))[1]
+
+    return validate_token(token, output=True)
