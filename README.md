@@ -1,16 +1,16 @@
 # JSON WEB TOKEN
 
-How to use a JSON web Token with Flask.
+Now, let me tell you how to use a JSON web Token with Flask.
 
 ## Start app:
 
-The app must start with a simply command:
+The app must start with a simple command:
 
 ```
 py main.py
 ```
 
-Because is a didactic code and I'm not going to use enviroment vars.
+It's didactic code. For this reason, I'm not going to use environment vars.
 
 ## Endpoints:
 
@@ -43,4 +43,4 @@ Get all users from a country.
 
 ## Thanks!
 
-This is only an example of my own projects and learning, thank you for take your time using this API. See you at next time.
+It's only an example of my projects and learning. Thanks for taking your time using this API. See you next time.
