@@ -20,8 +20,8 @@ def write_token(data: dict):
 def validate_token(token, output=False):
     try:
         if output:
-            return decode(token, key=getenv('SECRET'),algorithms=["HS256"])
-        decode(token, key=getenv['SECRET'], algorithms=['HS256'])
+            return decode(token, key=getenv('SECRET'),algorithms=['HS256'])
+        decode(token, key=getenv('SECRET'), algorithms=['HS256'])
     except exceptions.DecodeError:
         response = jsonify({"message": "invalid token"})
         response.status_code = 401
